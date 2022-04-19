@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class KnightMovement : MonoBehaviour
 {
@@ -10,14 +12,16 @@ public class KnightMovement : MonoBehaviour
     private float Horizontal;
     private bool Grounded;
     private Animator Animator;
-    // Start is called before the first frame update
+    [SerializeField] private float Life;
+    [SerializeField] Slider LifeSlider;
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
+        LifeSlider.maxValue = Life;
+        LifeSlider.value = LifeSlider.maxValue;
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -57,8 +61,29 @@ public class KnightMovement : MonoBehaviour
         Rigidbody2D.AddForce(Vector2.up * JumpForce);
     }
 
+    private void Death()
+    {
+        Destroy(gameObject);
+        print("Has perdido bro");
+        SceneManager.LoadScene("PrincipalMenu");
+    }
+    public void TakeDamage(float damage)
+    {
+        Life -= damage;
+        LifeSlider.value = Life;
+        Animator.SetBool("attacked", true);
+        if (Life <= 0)
+        {
+            Animator.SetTrigger("dying");
+            Invoke(nameof(Death),1.2f);
+        }
+        else
+        {
+            Animator.SetBool("attacked", false);
+        }
+    }
     private void FixedUpdate()
     {
-        Rigidbody2D.velocity = new Vector2(Horizontal, Rigidbody2D.velocity.y);
+        Rigidbody2D.velocity = new Vector2(Horizontal*Speed*Time.fixedDeltaTime, Rigidbody2D.velocity.y);
     }
 }

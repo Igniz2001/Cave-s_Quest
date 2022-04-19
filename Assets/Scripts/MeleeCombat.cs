@@ -7,6 +7,8 @@ public class MeleeCombat : MonoBehaviour
     [SerializeField] private Transform AttackController;
     [SerializeField] private float HitRatio;
     [SerializeField] private float HitDamage;
+    [SerializeField] private float TimeBetweenHits;
+    [SerializeField] private float TimeForNextHit;
     private Animator Animator;
 
 
@@ -16,10 +18,15 @@ public class MeleeCombat : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKey(KeyCode.J))
+        if(TimeForNextHit > 0)
+        {
+            TimeForNextHit -= Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.J) && TimeForNextHit <= 0)
         {
             Animator.SetBool("attacking", true);
             Hit();
+            TimeForNextHit = TimeBetweenHits;
         }
         else
         {

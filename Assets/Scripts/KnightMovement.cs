@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class KnightMovement : MonoBehaviour
 {
+    AudioSource reproductor;
     public float Speed;
     public float JumpForce;
     private Rigidbody2D Rigidbody2D;
@@ -13,11 +14,14 @@ public class KnightMovement : MonoBehaviour
     private bool Grounded;
     private Animator Animator;
     public float Life;
+    [SerializeField] AudioClip potionSound;
+    [SerializeField] AudioClip rubySound;
     [SerializeField] Slider LifeSlider;
     public static int playerPoints;
     public Text Score;
     void Start()
     {
+        reproductor = GetComponent<AudioSource>();
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         LifeSlider.maxValue = Life;
@@ -93,10 +97,12 @@ public class KnightMovement : MonoBehaviour
         if (collision.gameObject.tag == "Ruby")
         {
             IncreasePoints(100);
+            reproductor.PlayOneShot(rubySound);
             Destroy(collision.gameObject);
         }
         else if (collision.gameObject.tag == "Potion")
         {
+            reproductor.PlayOneShot(potionSound);
             if (Life > 0 && Life <= 800)
             {
                 Life += 200;

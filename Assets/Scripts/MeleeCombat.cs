@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MeleeCombat : MonoBehaviour
 {
+    AudioSource reproductor;
+    [SerializeField] AudioClip swordSwing;
     [SerializeField] private Transform AttackController;
     [SerializeField] private float HitRatio;
     [SerializeField] private float HitDamage;
@@ -14,6 +16,7 @@ public class MeleeCombat : MonoBehaviour
 
     private void Start()
     {
+        reproductor = GetComponent<AudioSource>();
         Animator = GetComponent<Animator>();
     }
     private void Update()
@@ -24,6 +27,7 @@ public class MeleeCombat : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.J) && TimeForNextHit <= 0)
         {
+            reproductor.PlayOneShot(swordSwing);
             Animator.SetTrigger("attacking");
             Hit();
             TimeForNextHit = TimeBetweenHits;

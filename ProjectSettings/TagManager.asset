@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Hero
   - Border
+  - Ruby
+  - Potion
   layers:
   - Default
   - TransparentFX

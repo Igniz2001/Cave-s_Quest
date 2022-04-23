@@ -70,7 +70,6 @@ public class GoblinScript : MonoBehaviour
     private void Death()
     {   // Aqui se detona la muerte del enemigo 
         Destroy(gameObject);
-        Destroy(AttackController);
     }
 
     public void IdleState()
@@ -150,7 +149,9 @@ public class GoblinScript : MonoBehaviour
         Animator.SetTrigger("attacked");
         if (Life <= 0)
         {
-            Animator.SetBool("dying", true);
+            HitDamage = 0;
+            Animator.SetTrigger("dying");
+            
             Invoke(nameof(Death), 1.2f);
         }
     }

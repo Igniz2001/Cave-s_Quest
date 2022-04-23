@@ -12,8 +12,10 @@ public class KnightMovement : MonoBehaviour
     private float Horizontal;
     private bool Grounded;
     private Animator Animator;
-    [SerializeField] private float Life;
+    public float Life;
     [SerializeField] Slider LifeSlider;
+    public static int playerPoints;
+    public Text Score;
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -24,6 +26,7 @@ public class KnightMovement : MonoBehaviour
 
     void Update()
     {
+        Score.text = "Score: " + playerPoints;
 
         Horizontal = Input.GetAxisRaw("Horizontal");
 
@@ -56,6 +59,11 @@ public class KnightMovement : MonoBehaviour
 
     }
 
+    public void IncreasePoints(int amount)
+    {
+        playerPoints += amount;
+    }
+
     private void Jump()
     {
         Rigidbody2D.AddForce(Vector2.up * JumpForce);
@@ -69,17 +77,43 @@ public class KnightMovement : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
+        if (damage <= 0.0f) { return; }
         Life -= damage;
         LifeSlider.value = Life;
-        Animator.SetBool("attacked", true);
+        Animator.SetTrigger("attacked");
         if (Life <= 0)
         {
             Animator.SetTrigger("dying");
             Invoke(nameof(Death),1.2f);
         }
-        else
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Ruby")
         {
-            Animator.SetBool("attacked", false);
+            IncreasePoints(100);
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.tag == "Potion")
+        {
+            if (Life > 0 && Life <= 800)
+            {
+                Life += 200;
+                LifeSlider.value = Life;
+                Destroy(collision.gameObject);
+            }
+            else if (Life == 1000)
+            {
+                Life += 0;
+                Destroy(collision.gameObject);
+            }
+            else if (Life >= 850)
+            {
+                Life = 1000;
+                LifeSlider.value = Life;
+                Destroy(collision.gameObject);
+            }
         }
     }
     private void FixedUpdate()

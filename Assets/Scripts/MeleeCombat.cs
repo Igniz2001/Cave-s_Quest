@@ -24,13 +24,9 @@ public class MeleeCombat : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.J) && TimeForNextHit <= 0)
         {
-            Animator.SetBool("attacking", true);
+            Animator.SetTrigger("attacking");
             Hit();
             TimeForNextHit = TimeBetweenHits;
-        }
-        else
-        {
-            Animator.SetBool("attacking", false);
         }
     }
     private void Hit()

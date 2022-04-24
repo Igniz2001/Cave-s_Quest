@@ -17,8 +17,8 @@ public class KnightMovement : MonoBehaviour
     [SerializeField] AudioClip potionSound;
     [SerializeField] AudioClip rubySound;
     [SerializeField] Slider LifeSlider;
-    public static int playerPoints;
-    public Text Score;
+    public int playerLifes;
+    public Text Lifes;
     void Start()
     {
         reproductor = GetComponent<AudioSource>();
@@ -30,8 +30,6 @@ public class KnightMovement : MonoBehaviour
 
     void Update()
     {
-        Score.text = "Score: " + playerPoints;
-
         Horizontal = Input.GetAxisRaw("Horizontal");
 
         if (Horizontal<0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
@@ -63,11 +61,6 @@ public class KnightMovement : MonoBehaviour
 
     }
 
-    public void IncreasePoints(int amount)
-    {
-        playerPoints += amount;
-    }
-
     private void Jump()
     {
         Rigidbody2D.AddForce(Vector2.up * JumpForce);
@@ -87,6 +80,7 @@ public class KnightMovement : MonoBehaviour
         Animator.SetTrigger("attacked");
         if (Life <= 0)
         {
+            
             Animator.SetTrigger("dying");
             Invoke(nameof(Death),1.2f);
         }
@@ -96,9 +90,7 @@ public class KnightMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ruby")
         {
-            IncreasePoints(100);
             reproductor.PlayOneShot(rubySound);
-            Destroy(collision.gameObject);
         }
         else if (collision.gameObject.tag == "Potion")
         {

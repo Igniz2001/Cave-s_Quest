@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GoblinScript : MonoBehaviour
 {
+    AudioSource reproductor;
+    public AudioClip death;
     public StateMachine state;
     public GameObject Knight;
     public float Speed;
@@ -25,6 +27,7 @@ public class GoblinScript : MonoBehaviour
     private void Start()
     {   // Aqui se llama el animador para que las animaciones funcionen cuando se les llame en los metodos
         Animator = GetComponent<Animator>();
+        reproductor = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -143,6 +146,10 @@ public class GoblinScript : MonoBehaviour
         }
     }
 
+    private void DeathSound()
+    {
+        reproductor.PlayOneShot(death);
+    }
     public void TakeDamage(float damage)
     {   // Aqui muestra como el enemigo toma daño de parte del jugador en caso de ser golpeado
         Life -= damage;
@@ -151,8 +158,9 @@ public class GoblinScript : MonoBehaviour
         {
             HitDamage = 0;
             Animator.SetTrigger("dying");
-            
+            Invoke(nameof(DeathSound), 0.9f);
             Invoke(nameof(Death), 1.2f);
+            
         }
     }
     private void EnemyHit()

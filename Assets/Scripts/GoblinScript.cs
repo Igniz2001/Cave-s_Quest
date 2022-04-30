@@ -159,6 +159,7 @@ public class GoblinScript : MonoBehaviour
         if (Life <= 0)
         {
             HitDamage = 0.0f;
+            Speed = 0.0f;
             Animator.SetTrigger("dying");
             Invoke(nameof(DeathSound), 0.9f);
             Invoke(nameof(Death), 1.2f);

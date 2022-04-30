@@ -10,6 +10,7 @@ ScriptsOnlyBuild:
     - LevelPass
     - LevelPass2
     - MeleeCombat
+    - PauseMenu
     - SceneChanger
     - SceneChanger2
     - ScoreController
@@ -19,7 +20,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.IK.IKEditorManager
     - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
-    - UnityEditor.Tilemaps.GridBrush
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
@@ -38,10 +38,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -102,33 +100,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1742}
     - Class: 114
-      Script: {instanceID: 2278}
+      Script: {instanceID: 1900}
     - Class: 114
-      Script: {instanceID: 2468}
+      Script: {instanceID: 2280}
     - Class: 114
-      Script: {instanceID: 2710}
+      Script: {instanceID: 2470}
     - Class: 114
-      Script: {instanceID: 2882}
+      Script: {instanceID: 2712}
     - Class: 114
-      Script: {instanceID: 3048}
+      Script: {instanceID: 2884}
     - Class: 114
-      Script: {instanceID: 3122}
+      Script: {instanceID: 3050}
     - Class: 114
-      Script: {instanceID: 3228}
+      Script: {instanceID: 3124}
     - Class: 114
-      Script: {instanceID: 3372}
+      Script: {instanceID: 3230}
     - Class: 114
-      Script: {instanceID: 3806}
+      Script: {instanceID: 3360}
     - Class: 114
-      Script: {instanceID: 4318}
+      Script: {instanceID: 3376}
     - Class: 114
-      Script: {instanceID: 4416}
+      Script: {instanceID: 3496}
     - Class: 114
-      Script: {instanceID: 4532}
+      Script: {instanceID: 3810}
     - Class: 114
-      Script: {instanceID: 5848}
+      Script: {instanceID: 4324}
     - Class: 114
-      Script: {instanceID: 33700}
+      Script: {instanceID: 4422}
+    - Class: 114
+      Script: {instanceID: 4538}
+    - Class: 114
+      Script: {instanceID: 5856}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -199,23 +201,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1742}
     - Class: 114
-      Script: {instanceID: 2468}
+      Script: {instanceID: 2470}
     - Class: 114
-      Script: {instanceID: 2710}
+      Script: {instanceID: 2712}
     - Class: 114
-      Script: {instanceID: 3048}
+      Script: {instanceID: 3050}
     - Class: 114
-      Script: {instanceID: 3122}
+      Script: {instanceID: 3124}
     - Class: 114
-      Script: {instanceID: 3228}
+      Script: {instanceID: 3230}
     - Class: 114
-      Script: {instanceID: 4318}
+      Script: {instanceID: 3360}
     - Class: 114
-      Script: {instanceID: 4532}
+      Script: {instanceID: 3496}
     - Class: 114
-      Script: {instanceID: 5848}
+      Script: {instanceID: 4174}
     - Class: 114
-      Script: {instanceID: 213434}
+      Script: {instanceID: 4324}
+    - Class: 114
+      Script: {instanceID: 4538}
+    - Class: 114
+      Script: {instanceID: 5856}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -262,19 +268,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1862}
     - Class: 114
-      Script: {instanceID: 2710}
+      Script: {instanceID: 2712}
     - Class: 114
-      Script: {instanceID: 2882}
+      Script: {instanceID: 2884}
     - Class: 114
-      Script: {instanceID: 2932}
+      Script: {instanceID: 2934}
     - Class: 114
-      Script: {instanceID: 3122}
+      Script: {instanceID: 3124}
     - Class: 114
-      Script: {instanceID: 3372}
+      Script: {instanceID: 3376}
     - Class: 114
-      Script: {instanceID: 3492}
+      Script: {instanceID: 3496}
     - Class: 114
-      Script: {instanceID: 204346}
+      Script: {instanceID: 4826}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -313,19 +319,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1862}
     - Class: 114
-      Script: {instanceID: 2710}
+      Script: {instanceID: 2712}
     - Class: 114
-      Script: {instanceID: 2882}
+      Script: {instanceID: 2884}
     - Class: 114
-      Script: {instanceID: 2932}
+      Script: {instanceID: 2934}
     - Class: 114
-      Script: {instanceID: 3030}
+      Script: {instanceID: 3032}
     - Class: 114
-      Script: {instanceID: 3122}
+      Script: {instanceID: 3124}
     - Class: 114
-      Script: {instanceID: 3372}
+      Script: {instanceID: 3376}
     - Class: 114
-      Script: {instanceID: 3492}
+      Script: {instanceID: 3496}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -372,23 +378,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1868}
     - Class: 114
-      Script: {instanceID: 2270}
+      Script: {instanceID: 2272}
     - Class: 114
-      Script: {instanceID: 2710}
+      Script: {instanceID: 2712}
     - Class: 114
-      Script: {instanceID: 2882}
+      Script: {instanceID: 2884}
     - Class: 114
-      Script: {instanceID: 2932}
+      Script: {instanceID: 2934}
     - Class: 114
-      Script: {instanceID: 3122}
+      Script: {instanceID: 3124}
     - Class: 114
-      Script: {instanceID: 3372}
+      Script: {instanceID: 3376}
     - Class: 114
-      Script: {instanceID: 3492}
+      Script: {instanceID: 3496}
     - Class: 114
-      Script: {instanceID: 4898}
+      Script: {instanceID: 4906}
     - Class: 114
-      Script: {instanceID: 5296}
+      Script: {instanceID: 5304}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -490,6 +496,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InitialMenu
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SceneChanger
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -642,6 +654,12 @@ ScriptsOnlyBuild:
     className: CameraMovement
   - hash:
       serializedVersion: 2
+      Hash: e381ac820a6ac4267a17a2b3e59138bb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseMenu
+  - hash:
+      serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -762,6 +780,12 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SceneChanger2
+  - hash:
+      serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -876,6 +900,12 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LevelPass2
+  - hash:
+      serializedVersion: 2
       Hash: 0fb27be807aa299702f28ad0bcad1f46
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -970,24 +1000,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: KnightMovement
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SceneChanger
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: LevelPass2
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SceneChanger2
   platform: 19
   scenePathNames:
   - Assets/Scenes/PrincipalMenu.unity

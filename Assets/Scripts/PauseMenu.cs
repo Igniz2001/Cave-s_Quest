@@ -6,8 +6,8 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject pauseButton;
     [SerializeField] private GameObject pauseMenu;
-    [SerializeField] private GameObject ScoreCanvas;
     public bool pause = false;
+
 
     private void Update()
     {

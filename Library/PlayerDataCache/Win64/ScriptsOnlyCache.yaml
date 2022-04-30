@@ -18,7 +18,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -205,6 +204,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2712}
     - Class: 114
+      Script: {instanceID: 2884}
+    - Class: 114
       Script: {instanceID: 3050}
     - Class: 114
       Script: {instanceID: 3124}
@@ -212,6 +213,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3230}
     - Class: 114
       Script: {instanceID: 3360}
+    - Class: 114
+      Script: {instanceID: 3376}
     - Class: 114
       Script: {instanceID: 3496}
     - Class: 114
@@ -654,7 +657,7 @@ ScriptsOnlyBuild:
     className: CameraMovement
   - hash:
       serializedVersion: 2
-      Hash: e381ac820a6ac4267a17a2b3e59138bb
+      Hash: f426e351456b9a8e6342d702471b46b2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PauseMenu

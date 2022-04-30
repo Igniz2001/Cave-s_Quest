@@ -57,17 +57,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\InitialMenu.cs" />
+    <Compile Include="Assets\Scripts\SceneChanger.cs" />
     <Compile Include="Assets\Scripts\Killzone.cs" />
     <Compile Include="Assets\Scripts\LevelPass.cs" />
     <Compile Include="Assets\Scripts\MeleeCombat.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\SceneChanger2.cs" />
     <Compile Include="Assets\Scripts\GoblinScript.cs" />
     <Compile Include="Assets\Scripts\ScoreController.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
-    <Compile Include="Assets\Scripts\KnightMovement.cs" />
-    <Compile Include="Assets\Scripts\SceneChanger.cs" />
     <Compile Include="Assets\Scripts\LevelPass2.cs" />
-    <Compile Include="Assets\Scripts\SceneChanger2.cs" />
+    <Compile Include="Assets\Scripts\KnightMovement.cs" />
+    <Compile Include="Assets\Scripts\PauseMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

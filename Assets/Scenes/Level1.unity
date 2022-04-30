@@ -6725,6 +6725,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 1930366038}
   HitRatio: 0.15
@@ -6990,6 +6991,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 532799842}
   HitRatio: 0.15
@@ -7490,6 +7492,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 286986538}
   HitRatio: 0.15
@@ -7755,6 +7758,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 675681283}
   HitRatio: 0.15
@@ -8132,6 +8136,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 844597584}
   HitRatio: 0.15
@@ -8479,6 +8484,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 1104413714}
   HitRatio: 0.15
@@ -8774,6 +8780,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 927732657}
   HitRatio: 0.15
@@ -9551,6 +9558,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 555110567}
   HitRatio: 0.15
@@ -10125,6 +10133,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 603470108}
   HitRatio: 0.15
@@ -10636,6 +10645,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 2041518361}
   HitRatio: 0.15
@@ -12225,6 +12235,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 1673354915}
   HitRatio: 0.15
@@ -12490,6 +12501,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 1854111592}
   HitRatio: 0.15
@@ -13505,6 +13517,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 889531996}
   HitRatio: 0.15
@@ -13934,6 +13947,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 684662065}
   HitRatio: 0.15
@@ -14199,6 +14213,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 429625238}
   HitRatio: 0.15
@@ -15602,6 +15617,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 971151597}
   HitRatio: 0.15
@@ -15996,6 +16012,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 588063606}
   HitRatio: 0.15
@@ -16533,7 +16550,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 96.75, y: 0.68, z: -10}
+  m_LocalPosition: {x: -4.92, y: 0.68, z: -10}
   m_LocalScale: {x: 1, y: 0.4375, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -17274,6 +17291,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 547356340}
   HitRatio: 0.15
@@ -17650,85 +17668,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &584020097
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 584020098}
-  - component: {fileID: 584020100}
-  - component: {fileID: 584020099}
-  m_Layer: 5
-  m_Name: Lifes
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &584020098
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 584020097}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1628517203}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -199.8, y: -32.800003}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 1, y: 1}
---- !u!114 &584020099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 584020097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
-    m_FontStyle: 3
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 3
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Lives : '
---- !u!222 &584020100
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 584020097}
-  m_CullTransparentMesh: 1
 --- !u!1 &588063605
 GameObject:
   m_ObjectHideFlags: 0
@@ -18919,6 +18858,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 1550871702}
   HitRatio: 0.15
@@ -22331,6 +22271,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 1317855881}
   HitRatio: 0.15
@@ -22760,6 +22701,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 627610315}
   HitRatio: 0.15
@@ -23962,6 +23904,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 1987280914}
   HitRatio: 0.15
@@ -25684,6 +25627,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 83110020}
   HitRatio: 0.15
@@ -26945,6 +26889,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 505270001}
   HitRatio: 0.15
@@ -27220,6 +27165,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 970065765}
   HitRatio: 0.15
@@ -27700,6 +27646,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 1268513890}
   HitRatio: 0.15
@@ -28077,6 +28024,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 301715334}
   HitRatio: 0.15
@@ -30439,6 +30387,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 1309601414}
   HitRatio: 0.15
@@ -31234,7 +31183,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1322383200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8ee2f4e044b0a74eaf03e89e648baf5, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b5e3a8e16bcfda4aa4e8e09af32eb9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &1322383202
@@ -32491,6 +32440,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 161656366}
   HitRatio: 0.15
@@ -32838,6 +32788,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 2117300509}
   HitRatio: 0.15
@@ -33584,6 +33535,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 2141005950}
   HitRatio: 0.15
@@ -34606,7 +34558,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.600006, y: -32.800003}
+  m_AnchoredPosition: {x: -4.5999756, y: -32.799988}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1484132981
@@ -34768,8 +34720,6 @@ MonoBehaviour:
   potionSound: {fileID: 8300000, guid: ad5808c2bcca3f64ebc6294f86a6b4e1, type: 3}
   rubySound: {fileID: 8300000, guid: b06f3512f9be0a342ae881f5322cf1d5, type: 3}
   LifeSlider: {fileID: 665079958}
-  playerLifes: 3
-  Lifes: {fileID: 584020099}
 --- !u!95 &1484443767
 Animator:
   serializedVersion: 3
@@ -34807,6 +34757,7 @@ MonoBehaviour:
   HitDamage: 50
   TimeBetweenHits: 0.5
   TimeForNextHit: 0
+  canAttack: 1
 --- !u!82 &1484443769
 AudioSource:
   m_ObjectHideFlags: 0
@@ -37658,6 +37609,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 1439843610}
   HitRatio: 0.15
@@ -37962,7 +37914,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 665079957}
-  - {fileID: 584020098}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -38454,6 +38405,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 318882927}
   HitRatio: 0.15
@@ -39437,6 +39389,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 1953336157}
   HitRatio: 0.15
@@ -39784,6 +39737,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 1821300578}
   HitRatio: 0.15
@@ -43719,6 +43673,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 1776952838}
   HitRatio: 0.15
@@ -44650,6 +44605,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 1859769799}
   HitRatio: 0.15
@@ -45238,6 +45194,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 849275428}
   HitRatio: 0.15
@@ -45955,6 +45912,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 32186132}
   HitRatio: 0.15
@@ -46220,6 +46178,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 139905601}
   HitRatio: 0.15
@@ -47802,6 +47761,7 @@ MonoBehaviour:
   state: 0
   Knight: {fileID: 1484443761}
   Speed: 0.6
+  cooldown: 1
   Life: 50
   AttackController: {fileID: 1878343409}
   HitRatio: 0.15

@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class LevelPass : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D other)
+    public void ExitGame()
     {
-        if (other.gameObject.tag == "Hero")
-        {
-            print("Has ganado el nivel");
-            SceneManager.LoadScene("PrincipalMenu");
-        }
+        SceneManager.LoadScene("PrincipalMenu");
+    }
+
+    public void Next()
+    {
+        SceneManager.LoadScene("Level2");
     }
 }

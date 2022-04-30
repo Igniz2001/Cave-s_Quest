@@ -11,6 +11,7 @@ public class MeleeCombat : MonoBehaviour
     [SerializeField] private float HitDamage;
     [SerializeField] private float TimeBetweenHits;
     [SerializeField] private float TimeForNextHit;
+    public bool canAttack = true;
     private Animator Animator;
 
 
@@ -25,12 +26,15 @@ public class MeleeCombat : MonoBehaviour
         {
             TimeForNextHit -= Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.J) && TimeForNextHit <= 0)
+        if (canAttack)
         {
-            reproductor.PlayOneShot(swordSwing);
-            Animator.SetTrigger("attacking");
-            Hit();
-            TimeForNextHit = TimeBetweenHits;
+            if (Input.GetKey(KeyCode.J) && TimeForNextHit <= 0)
+            {
+                reproductor.PlayOneShot(swordSwing);
+                Animator.SetTrigger("attacking");
+                Hit();
+                TimeForNextHit = TimeBetweenHits;
+            }
         }
     }
     private void Hit()

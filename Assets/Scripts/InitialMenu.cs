@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class InitialMenu : MonoBehaviour
 {
+    //aqui se gestionan los botones del menu principal, el botón que dará inicio al juego 
+    //y el botón que dará la salida del juego
+
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Level1");
     }
 
     public void ExitGame()

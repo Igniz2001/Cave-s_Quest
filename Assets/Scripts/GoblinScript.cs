@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class GoblinScript : MonoBehaviour
 {
+    // en este script se maneja todo el comportamiento del enemigo del juego
     AudioSource reproductor;
     public AudioClip death;
     public StateMachine state;
     public GameObject Knight;
     public float Speed;
     private float LastAttack;
+    public float cooldown;
     private Animator Animator;
     [SerializeField] private float Life;
     [SerializeField] private Transform AttackController;
@@ -65,8 +67,8 @@ public class GoblinScript : MonoBehaviour
 
     public void Attack()
     {
-        EnemyHit();
         Animator.SetTrigger("enemyAttack");
+        EnemyHit();
         LastAttack = Time.time;
     }
 
@@ -108,7 +110,7 @@ public class GoblinScript : MonoBehaviour
     {
         Look();
         float distance = Mathf.Abs(Knight.transform.position.x - transform.position.x);
-        if (distance < attackRange && Time.time > LastAttack + 1.0f)
+        if (distance < attackRange && Time.time > LastAttack + cooldown)
         {   //cuando la distancia sea menor a 1.0f, el enemigo atacará y cumplira con un tiempo de espera para el proximo ataque 
             Attack();
         }
@@ -156,7 +158,7 @@ public class GoblinScript : MonoBehaviour
         Animator.SetTrigger("attacked");
         if (Life <= 0)
         {
-            HitDamage = 0;
+            HitDamage = 0.0f;
             Animator.SetTrigger("dying");
             Invoke(nameof(DeathSound), 0.9f);
             Invoke(nameof(Death), 1.2f);

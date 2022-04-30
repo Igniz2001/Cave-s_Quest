@@ -20,8 +20,8 @@ public class CameraMovement : MonoBehaviour
         if (target != null)
         {
             Vector3 targetPosition = target.position + offset;
-            //verify if the targetPosition is out of bound or not
-            //limit it to the min and max values
+            //Verifica si el targetPosition esta fuera de limite o no
+            //Está limitado a los valores max y min observados en el componente del script
 
             Vector3 boundPosition = new Vector3(Mathf.Clamp(targetPosition.x, minValues.x, maxValue.x),
                 Mathf.Clamp(targetPosition.y, minValues.y, maxValue.y),

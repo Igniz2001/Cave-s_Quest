@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class KnightMovement : MonoBehaviour
 {
+    //en este script se hace referencia al personaje del jugador, todo lo relacionado
+    // al jugador menos su ataque
     AudioSource reproductor;
     public float Speed;
     public float JumpForce;
@@ -17,8 +19,6 @@ public class KnightMovement : MonoBehaviour
     [SerializeField] AudioClip potionSound;
     [SerializeField] AudioClip rubySound;
     [SerializeField] Slider LifeSlider;
-    public int playerLifes;
-    public Text Lifes;
     void Start()
     {
         reproductor = GetComponent<AudioSource>();
@@ -30,12 +30,13 @@ public class KnightMovement : MonoBehaviour
 
     void Update()
     {
+        
         Horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (Horizontal<0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
-        else if (Horizontal>0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        if (Horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+        else if (Horizontal > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
-        Animator.SetBool("running",Horizontal != 0.0f );
+        Animator.SetBool("running", Horizontal != 0.0f);
 
 
         Debug.DrawRay(transform.position, Vector3.down * 0.3f, Color.red);
@@ -74,10 +75,17 @@ public class KnightMovement : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
-        if (damage <= 0.0f) { return; }
-        Life -= damage;
-        LifeSlider.value = Life;
-        Animator.SetTrigger("attacked");
+        if (damage <= 0.0f)
+        {
+            return;
+        }
+        else
+        {
+            Life -= damage;
+            LifeSlider.value = Life;
+            Animator.SetTrigger("attacked");
+            StartCoroutine(AttackStop());
+        }
         if (Life <= 0)
         {
             
@@ -86,6 +94,13 @@ public class KnightMovement : MonoBehaviour
         }
     }
 
+    private IEnumerator AttackStop()
+    {
+        print("me llamaron");
+        gameObject.GetComponent<MeleeCombat>().canAttack = false;
+        yield return new WaitForSeconds(0.6f);
+        gameObject.GetComponent<MeleeCombat>().canAttack = true;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Ruby")
@@ -116,6 +131,6 @@ public class KnightMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Rigidbody2D.velocity = new Vector2(Horizontal*Speed*Time.fixedDeltaTime, Rigidbody2D.velocity.y);
+       Rigidbody2D.velocity = new Vector2(Horizontal * Speed * Time.fixedDeltaTime, Rigidbody2D.velocity.y);
     }
 }

@@ -277,6 +277,7 @@ MonoBehaviour:
   AttackController: {fileID: 917180404}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -836,6 +837,7 @@ MonoBehaviour:
   AttackController: {fileID: 2102852975}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -1907,6 +1909,7 @@ MonoBehaviour:
   AttackController: {fileID: 401294684}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -2255,6 +2258,7 @@ MonoBehaviour:
   AttackController: {fileID: 975688572}
   HitRatio: 0.1
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -2521,6 +2525,7 @@ MonoBehaviour:
   AttackController: {fileID: 689883617}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -2869,6 +2874,7 @@ MonoBehaviour:
   AttackController: {fileID: 1196496228}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -3458,6 +3464,7 @@ MonoBehaviour:
   AttackController: {fileID: 1248671767}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -3931,6 +3938,7 @@ MonoBehaviour:
   AttackController: {fileID: 1159947044}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -4616,6 +4624,7 @@ MonoBehaviour:
   AttackController: {fileID: 94829013}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -4915,6 +4924,7 @@ MonoBehaviour:
   AttackController: {fileID: 324869436}
   HitRatio: 0.1
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -6004,6 +6014,7 @@ MonoBehaviour:
   AttackController: {fileID: 285197206}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -6770,6 +6781,7 @@ MonoBehaviour:
   AttackController: {fileID: 1920514455}
   HitRatio: 0.1
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -7199,6 +7211,7 @@ MonoBehaviour:
   AttackController: {fileID: 1613537472}
   HitRatio: 0.1
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -15597,6 +15610,7 @@ MonoBehaviour:
   AttackController: {fileID: 266649605}
   HitRatio: 0.1
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -16172,6 +16186,7 @@ MonoBehaviour:
   AttackController: {fileID: 1086421300}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -16667,6 +16682,7 @@ MonoBehaviour:
   AttackController: {fileID: 486598391}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -17055,6 +17071,7 @@ MonoBehaviour:
   AttackController: {fileID: 2031453419}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -17536,6 +17553,7 @@ MonoBehaviour:
   AttackController: {fileID: 2056548002}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -17884,6 +17902,7 @@ MonoBehaviour:
   AttackController: {fileID: 68080229}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -18511,6 +18530,7 @@ MonoBehaviour:
   AttackController: {fileID: 1317983779}
   HitRatio: 0.1
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -18941,6 +18961,7 @@ MonoBehaviour:
   AttackController: {fileID: 1501651980}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -20562,6 +20583,7 @@ MonoBehaviour:
   AttackController: {fileID: 1327177724}
   HitRatio: 0.1
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -21258,6 +21280,7 @@ MonoBehaviour:
   AttackController: {fileID: 1622075723}
   HitRatio: 0.1
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -21484,7 +21507,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a9a4a204703fc2b439fee13f26bd90e8, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -21865,6 +21888,7 @@ MonoBehaviour:
   AttackController: {fileID: 967133047}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -22940,6 +22964,7 @@ MonoBehaviour:
   AttackController: {fileID: 1937065486}
   HitRatio: 0.1
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -23876,6 +23901,7 @@ MonoBehaviour:
   AttackController: {fileID: 1660455098}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -24224,6 +24250,7 @@ MonoBehaviour:
   AttackController: {fileID: 745912449}
   HitRatio: 0.1
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -24619,6 +24646,7 @@ MonoBehaviour:
   AttackController: {fileID: 1387487764}
   HitRatio: 0.1
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -25436,6 +25464,7 @@ MonoBehaviour:
   AttackController: {fileID: 1032246599}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -25896,6 +25925,7 @@ MonoBehaviour:
   AttackController: {fileID: 601124936}
   HitRatio: 0.1
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -26665,6 +26695,7 @@ MonoBehaviour:
   AttackController: {fileID: 1759724334}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -27043,6 +27074,7 @@ MonoBehaviour:
   AttackController: {fileID: 1742921629}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -27309,6 +27341,7 @@ MonoBehaviour:
   AttackController: {fileID: 1371316116}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -27622,6 +27655,7 @@ MonoBehaviour:
   AttackController: {fileID: 1027260032}
   HitRatio: 0.1
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -27888,6 +27922,7 @@ MonoBehaviour:
   AttackController: {fileID: 1275709320}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -28397,7 +28432,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_Sprite: {fileID: 4723107735738678597, guid: 0de18ea7e45a783428287a90ca239e68, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -28705,6 +28740,7 @@ MonoBehaviour:
   AttackController: {fileID: 1271625740}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -29001,6 +29037,7 @@ MonoBehaviour:
   AttackController: {fileID: 1292799985}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -29812,6 +29849,7 @@ MonoBehaviour:
   AttackController: {fileID: 319748249}
   HitRatio: 0.1
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -30464,7 +30502,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_Sprite: {fileID: 4723107735738678597, guid: 0de18ea7e45a783428287a90ca239e68, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -30800,6 +30838,7 @@ MonoBehaviour:
   AttackController: {fileID: 1700771121}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -31474,6 +31513,7 @@ MonoBehaviour:
   AttackController: {fileID: 2130958025}
   HitRatio: 0.1
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -32290,6 +32330,7 @@ MonoBehaviour:
   AttackController: {fileID: 1418747361}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -33453,6 +33494,7 @@ MonoBehaviour:
   AttackController: {fileID: 1942984107}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -34126,6 +34168,7 @@ MonoBehaviour:
   AttackController: {fileID: 351197670}
   HitRatio: 0.1
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -34392,6 +34435,7 @@ MonoBehaviour:
   AttackController: {fileID: 1933342722}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -34658,6 +34702,7 @@ MonoBehaviour:
   AttackController: {fileID: 64942799}
   HitRatio: 0.1
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -34924,6 +34969,7 @@ MonoBehaviour:
   AttackController: {fileID: 1609158136}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -35594,6 +35640,7 @@ MonoBehaviour:
   AttackController: {fileID: 2046468122}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -36138,6 +36185,7 @@ MonoBehaviour:
   AttackController: {fileID: 1392032179}
   HitRatio: 0.1
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -37499,6 +37547,7 @@ MonoBehaviour:
   AttackController: {fileID: 1024797094}
   HitRatio: 0.1
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -37877,6 +37926,7 @@ MonoBehaviour:
   AttackController: {fileID: 1492915311}
   HitRatio: 0.1
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -38438,6 +38488,7 @@ MonoBehaviour:
   AttackController: {fileID: 1528522990}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -38751,6 +38802,7 @@ MonoBehaviour:
   AttackController: {fileID: 992792077}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -39931,6 +39983,7 @@ MonoBehaviour:
   AttackController: {fileID: 2077368989}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -40197,6 +40250,7 @@ MonoBehaviour:
   AttackController: {fileID: 1553339691}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -41233,6 +41287,7 @@ MonoBehaviour:
   AttackController: {fileID: 1121857878}
   HitRatio: 0.15
   HitDamage: 100
+  soundEnter: 0.3
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4

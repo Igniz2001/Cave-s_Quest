@@ -66,7 +66,7 @@ public class GoblinScript : MonoBehaviour
 
     }
 
-    public void Attack()
+    public void Attack() // despliega la animación, llama el metodo que causa el daño al jugador y le da un tiempo de enfriamiento
     {
         Animator.SetTrigger("enemyAttack");
         EnemyHit();
@@ -78,7 +78,7 @@ public class GoblinScript : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void IdleState()
+    public void IdleState() // este es el estado que adopta el enemigo cuando no hay nada a su alrededor y espera al jugador
     {
         float distance = Mathf.Abs(Knight.transform.position.x - transform.position.x);
         if (distance < followDistance)
@@ -87,7 +87,7 @@ public class GoblinScript : MonoBehaviour
         }
     }
 
-    public void FollowState()
+    public void FollowState() //este estado se adopta cuando el enemigo persigue al jugador
     {
         Look();
         EdgeLook();
@@ -121,12 +121,12 @@ public class GoblinScript : MonoBehaviour
         }
     }
 
-    public void DeathState()
+    public void DeathState() //esto es solo para llenar la maquina de estados del enemigo
     {
 
     }
 
-    public void StateChange(StateMachine e)
+    public void StateChange(StateMachine e) //esto cambia los estados del enemigo 
     {
         if (state == StateMachine.follow)
         {
@@ -135,7 +135,7 @@ public class GoblinScript : MonoBehaviour
         state = e;
     }
 
-    private void EdgeLook()
+    private void EdgeLook() //esto detecta los bordes de los abismos
     {
 
         Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position + new Vector3(transform.localScale.x * borderDistance, 0, 0), borderRadio);
@@ -190,7 +190,7 @@ public class GoblinScript : MonoBehaviour
     }
 }
 
-public enum StateMachine{
+public enum StateMachine{ //esta es la maquina de estados
     idle = 0,
     follow = 1,
     attack = 2,

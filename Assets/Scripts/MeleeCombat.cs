@@ -28,7 +28,7 @@ public class MeleeCombat : MonoBehaviour
         }
         if (canAttack)
         {
-            if (Input.GetKey(KeyCode.J) && TimeForNextHit <= 0)
+            if (Input.GetKey(KeyCode.J) && TimeForNextHit <= 0) //cuando el jugador presione J y se haya cumplido su tiempo de eenfriamiento, atacará
             {
                 reproductor.PlayOneShot(swordSwing);
                 Animator.SetTrigger("attacking");
@@ -37,7 +37,7 @@ public class MeleeCombat : MonoBehaviour
             }
         }
     }
-    private void Hit()
+    private void Hit() // cuando identifique un enemigo con la etiqueta enemy, mandará una referencia al script del enemigo para causarle daño
     {
         
         Collider2D[] objects = Physics2D.OverlapCircleAll(AttackController.position, HitRatio);
@@ -52,7 +52,7 @@ public class MeleeCombat : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmos() // se encarga de generar el circulo que será el rango de ataque del jugador
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(AttackController.position, HitRatio);

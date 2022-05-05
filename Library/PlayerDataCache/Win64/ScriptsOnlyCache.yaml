@@ -72,6 +72,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 58
       Script: {instanceID: 0}
+    - Class: 60
+      Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
     - Class: 66
@@ -172,6 +174,8 @@ ScriptsOnlyBuild:
     - Class: 50
       Script: {instanceID: 0}
     - Class: 58
+      Script: {instanceID: 0}
+    - Class: 60
       Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
@@ -807,7 +811,7 @@ ScriptsOnlyBuild:
     className: EventTrigger
   - hash:
       serializedVersion: 2
-      Hash: ee44e6679f715364891e7860949a6f84
+      Hash: aa47232398788358bb9143e81e43db22
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GoblinScript
@@ -1010,4 +1014,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/LevelPass2.unity
   - Assets/Scenes/Level1.unity
   - Assets/Scenes/Level2.unity
-  playerPath: "C:/Users/valen/Downloads/Nueva carpeta (2)/Cave\xB4s Quest.exe"
+  playerPath: "C:/Users/valen/Downloads/Game/Cave\xB4s Quest.exe"

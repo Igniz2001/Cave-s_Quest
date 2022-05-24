@@ -278,6 +278,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -838,6 +839,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -1910,6 +1912,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -2259,6 +2262,7 @@ MonoBehaviour:
   HitRatio: 0.1
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -2526,6 +2530,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -2875,6 +2880,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -3465,6 +3471,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -3939,6 +3946,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -4625,6 +4633,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -4925,6 +4934,7 @@ MonoBehaviour:
   HitRatio: 0.1
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -5273,7 +5283,6 @@ GameObject:
   - component: {fileID: 326329662}
   - component: {fileID: 326329661}
   - component: {fileID: 326329660}
-  - component: {fileID: 326329659}
   - component: {fileID: 326329658}
   m_Layer: 0
   m_Name: Knight
@@ -5378,25 +5387,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &326329659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326329657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff3ef1b46e172db4fbef1c3bb87c91e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swordSwing: {fileID: 8300000, guid: 9abe4135870910a4db2f4ba1f2453ff4, type: 3}
-  AttackController: {fileID: 569086864}
-  HitRatio: 0.15
-  HitDamage: 50
-  TimeBetweenHits: 0.5
-  TimeForNextHit: 0
-  canAttack: 1
 --- !u!95 &326329660
 Animator:
   serializedVersion: 3
@@ -5434,6 +5424,15 @@ MonoBehaviour:
   potionSound: {fileID: 8300000, guid: ad5808c2bcca3f64ebc6294f86a6b4e1, type: 3}
   rubySound: {fileID: 8300000, guid: b06f3512f9be0a342ae881f5322cf1d5, type: 3}
   LifeSlider: {fileID: 376177551}
+  swordSwing: {fileID: 8300000, guid: 9abe4135870910a4db2f4ba1f2453ff4, type: 3}
+  AttackController: {fileID: 569086864}
+  AttackControllerCrouch: {fileID: 1861933203}
+  HitRatio: 0.15
+  HitDamage: 50
+  TimeBetweenHits: 0.5
+  TimeForNextHit: 0
+  canAttack: 1
+  agachar: 0
 --- !u!70 &326329662
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5534,6 +5533,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 569086864}
+  - {fileID: 1861933203}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6015,6 +6015,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -6782,6 +6783,7 @@ MonoBehaviour:
   HitRatio: 0.1
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -7212,6 +7214,7 @@ MonoBehaviour:
   HitRatio: 0.1
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -15611,6 +15614,7 @@ MonoBehaviour:
   HitRatio: 0.1
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -15747,7 +15751,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 569086863}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.274, y: -0.027, z: 0}
+  m_LocalPosition: {x: 0.238, y: 0.006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 326329665}
@@ -16187,6 +16191,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -16683,6 +16688,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -17072,6 +17078,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -17554,6 +17561,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -17903,6 +17911,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -18531,6 +18540,7 @@ MonoBehaviour:
   HitRatio: 0.1
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -18962,6 +18972,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -20584,6 +20595,7 @@ MonoBehaviour:
   HitRatio: 0.1
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -21281,6 +21293,7 @@ MonoBehaviour:
   HitRatio: 0.1
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -21889,6 +21902,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -22965,6 +22979,7 @@ MonoBehaviour:
   HitRatio: 0.1
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -23902,6 +23917,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -24251,6 +24267,7 @@ MonoBehaviour:
   HitRatio: 0.1
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -24647,6 +24664,7 @@ MonoBehaviour:
   HitRatio: 0.1
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -25465,6 +25483,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -25926,6 +25945,7 @@ MonoBehaviour:
   HitRatio: 0.1
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -26696,6 +26716,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -27075,6 +27096,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -27342,6 +27364,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -27656,6 +27679,7 @@ MonoBehaviour:
   HitRatio: 0.1
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -27923,6 +27947,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -28741,6 +28766,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -29038,6 +29064,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -29850,6 +29877,7 @@ MonoBehaviour:
   HitRatio: 0.1
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -30839,6 +30867,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -31514,6 +31543,7 @@ MonoBehaviour:
   HitRatio: 0.1
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -32331,6 +32361,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -33495,6 +33526,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -34169,6 +34201,7 @@ MonoBehaviour:
   HitRatio: 0.1
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -34436,6 +34469,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -34703,6 +34737,7 @@ MonoBehaviour:
   HitRatio: 0.1
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -34970,6 +35005,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -35641,6 +35677,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -36186,6 +36223,7 @@ MonoBehaviour:
   HitRatio: 0.1
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -36983,6 +37021,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1861933202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1861933203}
+  m_Layer: 0
+  m_Name: AttackController (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1861933203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861933202}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.207, y: -0.103, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 326329665}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1874143158
 GameObject:
   m_ObjectHideFlags: 0
@@ -37548,6 +37616,7 @@ MonoBehaviour:
   HitRatio: 0.1
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -37927,6 +37996,7 @@ MonoBehaviour:
   HitRatio: 0.1
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -38489,6 +38559,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -38803,6 +38874,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -39984,6 +40056,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -40251,6 +40324,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4
@@ -40456,7 +40530,6 @@ GameObject:
   - component: {fileID: 2077306707}
   - component: {fileID: 2077306706}
   - component: {fileID: 2077306705}
-  - component: {fileID: 2077306704}
   m_Layer: 0
   m_Name: KillZone
   m_TagString: Untagged
@@ -40464,102 +40537,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!82 &2077306704
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2077306703}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 0.8
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!114 &2077306705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40572,7 +40549,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81667c3dbff67144882451acf3dfe32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallScream: {fileID: 8300000, guid: 829ca1ce6f3df9140947a6593c1c034d, type: 3}
 --- !u!61 &2077306706
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41288,6 +41264,7 @@ MonoBehaviour:
   HitRatio: 0.15
   HitDamage: 100
   soundEnter: 0.3
+  deathEnter: 1.2
   attackRange: 0.3
   followDistance: 2
   escapeDistance: 4

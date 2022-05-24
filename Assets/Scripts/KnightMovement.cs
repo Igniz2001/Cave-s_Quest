@@ -13,12 +13,25 @@ public class KnightMovement : MonoBehaviour
     public float JumpForce;
     private Rigidbody2D Rigidbody2D;
     private float Horizontal;
+    private float Vertical;
     private bool Grounded;
     private Animator Animator;
     public float Life;
     [SerializeField] AudioClip potionSound;
     [SerializeField] AudioClip rubySound;
     [SerializeField] Slider LifeSlider;
+    //-----------------------------------------------------------------------------------------------
+    [SerializeField] AudioClip swordSwing;
+    [SerializeField] private Transform AttackController;
+    [SerializeField] private Transform AttackControllerCrouch;
+    [SerializeField] private float HitRatio;
+    [SerializeField] private float HitDamage;
+    [SerializeField] private float TimeBetweenHits;
+    [SerializeField] private float TimeForNextHit;
+    public bool canAttack = true;
+    //-----------------------------------------------------------------------------------------------
+    public bool agachar = false;
+
     void Start()
     {
         //aqui se inicializan los componentes externos, sea rigidbody, sonidos etc.
@@ -34,11 +47,28 @@ public class KnightMovement : MonoBehaviour
         //aqui se actualiza todas las entradas del jugador a lo largo del gameplay
         
         Horizontal = Input.GetAxisRaw("Horizontal"); //esto se encarga del movimiento 36,38,39,41
+        Vertical = Input.GetAxisRaw("Vertical");
 
         if (Horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
         else if (Horizontal > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
         Animator.SetBool("running", Horizontal != 0.0f);
+
+        if (Vertical < 0.0f && Grounded) //Con esto se agacha
+        {
+            agachar = true;
+            Animator.SetBool("crouch",true);
+            Speed = 20;
+        }
+        else
+        {
+            agachar = false;
+            Animator.SetBool("crouch", false);
+            Speed = 65;
+        }
+
+
+
 
 
         Debug.DrawRay(transform.position, Vector3.down * 0.3f, Color.red);//esto detecta si hay suelo para generar un enfriamiento para el salto del personaje para que no sea infinito
@@ -61,6 +91,36 @@ public class KnightMovement : MonoBehaviour
         {
             Animator.SetBool("jumping", false);
         }
+
+        //--------------------------------------------------------------
+
+        if (TimeForNextHit > 0)
+        {
+            TimeForNextHit -= Time.deltaTime;
+        }
+        if (canAttack)
+        {
+            if (Input.GetKey(KeyCode.J) && TimeForNextHit <= 0) //cuando el jugador presione J y se haya cumplido su tiempo de eenfriamiento, atacará
+            {
+                reproductor.PlayOneShot(swordSwing);
+                if (agachar)
+                {
+                    Animator.SetTrigger("crouchAttack");
+                    CrouchHit();
+                    TimeForNextHit = TimeBetweenHits;
+                }
+                else
+                {
+                    Animator.SetTrigger("attacking");
+                    Hit();
+                    TimeForNextHit = TimeBetweenHits;
+                }
+            }
+        }
+
+        //-----------------------------------------------------------------
+
+
 
     }
 
@@ -99,9 +159,17 @@ public class KnightMovement : MonoBehaviour
     private IEnumerator AttackStop() // esto se llama cuando el jugador es atacado para evitar que pueda atacar en ese momento
     {
         print("me llamaron");
-        gameObject.GetComponent<MeleeCombat>().canAttack = false;
+        canAttack = false;
         yield return new WaitForSeconds(0.6f);
-        gameObject.GetComponent<MeleeCombat>().canAttack = true;
+        canAttack = true;
+    }
+
+    private IEnumerator AttackBoost()
+    {
+        print("se llamo");
+        HitDamage = 150;
+        yield return new WaitForSeconds(10.0f);
+        HitDamage = 50;
     }
     private void OnTriggerEnter2D(Collider2D collision) //esto maneja la barra de vida cuando la pocion de vida es recogida
     {
@@ -130,6 +198,54 @@ public class KnightMovement : MonoBehaviour
                 Destroy(collision.gameObject);
             }
         }
+        else if (collision.gameObject.tag == "Booster")
+        {
+            reproductor.PlayOneShot(potionSound);
+            StartCoroutine(AttackBoost());
+            Destroy(collision.gameObject);
+        }
+    }
+
+    private void Hit() // cuando identifique un enemigo con la etiqueta enemy, mandará una referencia al script del enemigo para causarle daño
+    {
+
+        Collider2D[] objects = Physics2D.OverlapCircleAll(AttackController.position, HitRatio);
+
+        foreach (Collider2D collider in objects)
+        {
+            if (collider.CompareTag("Enemy"))
+            {
+                collider.transform.GetComponent<GoblinScript>().TakeDamage(HitDamage);
+
+            }
+            else if (collider.CompareTag("Boss"))
+            {
+                collider.transform.GetComponent<BossScript>().TakeDamage(HitDamage);
+
+            }
+        }
+    }
+
+    private void CrouchHit() // cuando identifique un enemigo con la etiqueta enemy, mandará una referencia al script del enemigo para causarle daño
+    {
+
+        Collider2D[] objects = Physics2D.OverlapCircleAll(AttackControllerCrouch.position, HitRatio);
+
+        foreach (Collider2D collider in objects)
+        {
+            if (collider.CompareTag("Enemy"))
+            {
+                collider.transform.GetComponent<GoblinScript>().TakeDamage(HitDamage);
+
+            }
+        }
+    }
+
+    private void OnDrawGizmos() // se encarga de generar el circulo que será el rango de ataque del jugador
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(AttackController.position, HitRatio);
+        Gizmos.DrawWireSphere(AttackControllerCrouch.position, HitRatio);
     }
     private void FixedUpdate()
     {

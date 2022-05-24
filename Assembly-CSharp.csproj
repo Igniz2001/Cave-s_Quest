@@ -60,21 +60,23 @@
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
     <Compile Include="Assets\Scripts\Killzone.cs" />
     <Compile Include="Assets\Scripts\LevelPass.cs" />
-    <Compile Include="Assets\Scripts\MeleeCombat.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\SceneChanger2.cs" />
     <Compile Include="Assets\Scripts\GoblinScript.cs" />
     <Compile Include="Assets\Scripts\ScoreController.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\LevelPass2.cs" />
+    <Compile Include="Assets\Scripts\BossScript.cs" />
     <Compile Include="Assets\Scripts\KnightMovement.cs" />
-    <Compile Include="Assets\Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\LevelPass3.cs" />
+    <Compile Include="Assets\Scripts\SceneChanger3.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\Levels\Level 3\level 5\readme.txt" />
+    <None Include="Assets\Levels\Level 3\Level 3\readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />

@@ -12,6 +12,6 @@ public class LevelPass2 : MonoBehaviour
 
     public void Next()
     {
-        SceneManager.LoadScene("Level2");
+        SceneManager.LoadScene("Level3");
     }
 }

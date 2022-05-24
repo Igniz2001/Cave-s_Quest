@@ -5,13 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Killzone : MonoBehaviour
 {
-    [SerializeField] AudioClip fallScream;
-    AudioSource fallScreamSource;
 
-    private void Start()
-    {
-        fallScreamSource = GetComponent<AudioSource>();
-    }
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         //En este metodo cuando el jugador o un enemigo caigan al abismo, 
@@ -24,7 +19,6 @@ public class Killzone : MonoBehaviour
         }
         else if (other.gameObject.tag == "Enemy")
         {
-            fallScreamSource.PlayOneShot(fallScream);
             Destroy (other.gameObject);
         }
     }

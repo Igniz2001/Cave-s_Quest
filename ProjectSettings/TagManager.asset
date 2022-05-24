@@ -9,6 +9,8 @@ TagManager:
   - Border
   - Ruby
   - Potion
+  - Boss
+  - Booster
   layers:
   - Default
   - TransparentFX

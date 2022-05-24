@@ -18,6 +18,7 @@ public class GoblinScript : MonoBehaviour
     [SerializeField] private float HitRatio;
     [SerializeField] private float HitDamage;
     public float soundEnter;
+    public float deathEnter;
     
     [Header("Variables Bonitas")]
     public float attackRange = 1;
@@ -163,7 +164,7 @@ public class GoblinScript : MonoBehaviour
             Speed = 0.0f;
             Animator.SetTrigger("dying");
             Invoke(nameof(DeathSound), soundEnter);
-            Invoke(nameof(Death), 1.2f);
+            Invoke(nameof(Death), deathEnter);
             
         }
     }

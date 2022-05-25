@@ -24,6 +24,7 @@ public class KnightMovement : MonoBehaviour
     [SerializeField] AudioClip swordSwing;
     [SerializeField] private Transform AttackController;
     [SerializeField] private Transform AttackControllerCrouch;
+    public GameObject CircleCollider;
     [SerializeField] private float HitRatio;
     [SerializeField] private float HitDamage;
     [SerializeField] private float TimeBetweenHits;
@@ -52,17 +53,22 @@ public class KnightMovement : MonoBehaviour
         if (Horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
         else if (Horizontal > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
-        Animator.SetBool("running", Horizontal != 0.0f);
 
         if (Vertical < 0.0f && Grounded) //Con esto se agacha
         {
             agachar = true;
+            CircleCollider.SetActive(false);
             Animator.SetBool("crouch",true);
+            Animator.SetBool("crouchWalk", Horizontal != 0.0f);
             Speed = 20;
         }
         else
         {
+            if (CircleCollider == null) return;
             agachar = false;
+            CircleCollider.SetActive(true);
+            Animator.SetBool("crouchWalk", false);
+            Animator.SetBool("running", Horizontal != 0.0f);
             Animator.SetBool("crouch", false);
             Speed = 65;
         }
@@ -145,8 +151,15 @@ public class KnightMovement : MonoBehaviour
         {
             Life -= damage;
             LifeSlider.value = Life;
-            Animator.SetTrigger("attacked");
-            StartCoroutine(AttackStop());
+            if (agachar)
+            {
+                StartCoroutine(AttackStop());
+            }
+            else
+            {
+                Animator.SetTrigger("attacked");
+                StartCoroutine(AttackStop());
+            }
         }
         if (Life <= 0)
         {

@@ -5427,6 +5427,7 @@ MonoBehaviour:
   swordSwing: {fileID: 8300000, guid: 9abe4135870910a4db2f4ba1f2453ff4, type: 3}
   AttackController: {fileID: 569086864}
   AttackControllerCrouch: {fileID: 1861933203}
+  CircleCollider: {fileID: 1405269199}
   HitRatio: 0.15
   HitDamage: 50
   TimeBetweenHits: 0.5
@@ -5446,8 +5447,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.008050442}
-  m_Size: {x: 0.18999995, y: 0.35389912}
+  m_Offset: {x: 0, y: -0.07389914}
+  m_Size: {x: 0.18999995, y: 0.18999995}
   m_Direction: 0
 --- !u!50 &326329663
 Rigidbody2D:
@@ -5534,6 +5535,7 @@ Transform:
   m_Children:
   - {fileID: 569086864}
   - {fileID: 1861933203}
+  - {fileID: 1405269200}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31276,6 +31278,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1405269199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1405269200}
+  - component: {fileID: 1405269201}
+  m_Layer: 0
+  m_Name: CrouchCircle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1405269200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405269199}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.003, y: 0.022, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 326329665}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1405269201
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405269199}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.08346865}
+  serializedVersion: 2
+  m_Radius: 0.08553282
 --- !u!1 &1418747360
 GameObject:
   m_ObjectHideFlags: 0

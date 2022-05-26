@@ -177,7 +177,8 @@ public class GoblinScript : MonoBehaviour
         {
             if (collider.CompareTag("Hero"))
             {
-                collider.transform.GetComponent<KnightMovement>().TakeDamage(HitDamage);
+                KnightMovement km = collider.transform.GetComponent<KnightMovement>();
+                if (km != null) km.TakeDamage(HitDamage);
 
             }
         }

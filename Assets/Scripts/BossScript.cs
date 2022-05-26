@@ -46,16 +46,16 @@ public class BossScript : MonoBehaviour
         switch (bossState)
         {
             case BossStateMachine.idle:
-                IdleState();
+                BossIdleState();
                 break;
             case BossStateMachine.follow:
-                FollowState();
+                BossFollowState();
                 break;
             case BossStateMachine.attack:
-                AttackState();
+                BossAttackState();
                 break;
             case BossStateMachine.death:
-                DeathState();
+                BossDeathState();
                 break;
             default:
                 break;
@@ -72,10 +72,10 @@ public class BossScript : MonoBehaviour
 
     }
 
-    public void Attack() // despliega la animación, llama el metodo que causa el daño al jugador y le da un tiempo de enfriamiento
+    public void BossAttack() // despliega la animación, llama el metodo que causa el daño al jugador y le da un tiempo de enfriamiento
     {
         Animator.SetTrigger("enemyAttack");
-        EnemyHit();
+        BossHit();
         LastAttack = Time.time;
     }
 
@@ -86,7 +86,7 @@ public class BossScript : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void IdleState() // este es el estado que adopta el enemigo cuando no hay nada a su alrededor y espera al jugador
+    public void BossIdleState() // este es el estado que adopta el enemigo cuando no hay nada a su alrededor y espera al jugador
     {
         float distance = Mathf.Abs(Knight.transform.position.x - transform.position.x);
         if (distance < followDistance)
@@ -95,7 +95,7 @@ public class BossScript : MonoBehaviour
         }
     }
 
-    public void FollowState() //este estado se adopta cuando el enemigo persigue al jugador
+    public void BossFollowState() //este estado se adopta cuando el enemigo persigue al jugador
     {
         Look();
         EdgeLook();
@@ -115,13 +115,13 @@ public class BossScript : MonoBehaviour
         }
     }
 
-    public void AttackState()
+    public void BossAttackState()
     {
         Look();
         float distance = Mathf.Abs(Knight.transform.position.x - transform.position.x);
         if (distance < attackRange && Time.time > LastAttack + cooldown)
-        {   //cuando la distancia sea menor a 1.0f, el enemigo atacará y cumplira con un tiempo de espera para el proximo ataque 
-            Attack();
+        {   //cuando la distancia sea menor a lo establecido, el enemigo atacará y cumplira con un tiempo de espera para el proximo ataque 
+            BossAttack();
         }
         else if (distance > attackRange)
         {
@@ -129,7 +129,7 @@ public class BossScript : MonoBehaviour
         }
     }
 
-    public void DeathState() //esto es solo para llenar la maquina de estados del enemigo
+    public void BossDeathState() //esto es solo para llenar la maquina de estados del enemigo
     {
 
     }
@@ -176,7 +176,8 @@ public class BossScript : MonoBehaviour
 
         }
     }
-    private void EnemyHit()
+
+    private void BossHit()
     {   //Esto hace que el enemigo le haga daño al jugador y llama el script del jugador para hacerle daño
 
         Collider2D[] objects = Physics2D.OverlapCircleAll(AttackController.position, HitRatio);
@@ -185,9 +186,18 @@ public class BossScript : MonoBehaviour
         {
             if (collider.CompareTag("Hero"))
             {
-                collider.transform.GetComponent<KnightMovement>().TakeDamage(HitDamage);
+                KnightMovement km = collider.transform.GetComponent<KnightMovement>();
+                if (km != null) km.TakeDamage(HitDamage);
 
             }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            Destroy(other.gameObject);
         }
     }
 

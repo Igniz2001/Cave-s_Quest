@@ -60,7 +60,7 @@ public class KnightMovement : MonoBehaviour
             CircleCollider.SetActive(false);
             Animator.SetBool("crouch",true);
             Animator.SetBool("crouchWalk", Horizontal != 0.0f);
-            Speed = 20;
+            Speed = 35;
         }
         else
         {

@@ -135,7 +135,7 @@ public class KnightMovement : MonoBehaviour
         Rigidbody2D.AddForce(Vector2.up * JumpForce);
     }
 
-    private void Death() 
+    private void Death()
     {
         Destroy(gameObject);
         print("Has perdido bro");

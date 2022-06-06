@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1366
     height: 685
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 87
+  controlID: 1766
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 18
+  controlID: 1767
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 19
+  controlID: 1768
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -329,8 +329,8 @@ MonoBehaviour:
     vZoomLockedByDefault: 0
     m_HBaseRangeMin: -439
     m_HBaseRangeMax: 439
-    m_VBaseRangeMin: -154
-    m_VBaseRangeMax: 154
+    m_VBaseRangeMin: -143.5
+    m_VBaseRangeMax: 143.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -347,11 +347,11 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 0
+      y: 21
       width: 878
-      height: 308
+      height: 287
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 439, y: 154}
+    m_Translation: {x: 439, y: 143.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -359,9 +359,9 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -439
-      y: -154
+      y: -143.5
       width: 878
-      height: 308
+      height: 287
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 878, y: 308}
@@ -397,10 +397,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 62fbffff
+      scrollPos: {x: 0, y: 81}
+      m_SelectedIDs: 02f4ffff
+      m_LastClickedID: -3070
+      m_ExpandedIDs: 02f4ffffdef7ffffbef9ffff9cfaffff62fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -460,9 +460,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -25.382788, y: 0.42961296, z: -18.745096}
+    m_Target: {x: -65.564476, y: 0.8018644, z: -7.2767315}
     speed: 2
-    m_Value: {x: -25.235287, y: 0.42700487, z: -18.736837}
+    m_Value: {x: -65.564476, y: 0.8018644, z: -7.2767315}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -513,9 +513,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1.9179057
+    m_Target: 2.0189872
     speed: 2
-    m_Value: 1.8353164
+    m_Value: 2.0189872
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -843,22 +843,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Levels/Level 1
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Levels/Level 1
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "C:\\Users\\valen\\Downloads\\Proyecto Unity\\Cave\xB4s Quest"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 203}
-    m_SelectedIDs: 66530000
-    m_LastClickedID: 21350
-    m_ExpandedIDs: 00000000325300003453000036530000385300003a5300003c5300003e5300004053000000ca9a3b
+    m_SelectedIDs: 6a530000
+    m_LastClickedID: 21354
+    m_ExpandedIDs: 00000000425300004453000046530000485300004a5300004c5300004e5300005053000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -886,7 +886,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000325300003453000036530000385300003a5300003c5300003e53000040530000
+    m_ExpandedIDs: 00000000425300004453000046530000485300004a5300004c5300004e5300005053000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -938,7 +938,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 88}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -994,7 +994,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 69478
+  m_LastSelectedObjectID: 30114
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52

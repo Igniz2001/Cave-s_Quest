@@ -43,7 +43,7 @@ public class BossScript : MonoBehaviour
     {
         if (Knight == null) return; // si el jugador no existe, entonces que omita cualquiera de las acciones aqui mostradas
 
-        switch (bossState)
+        switch (bossState) //aqui se definen los estados del Boss, que son exactamente igual a los de los enemigos, solo que aqui se renombran ya que las maquinas de estados deben tener nombres propios
         {
             case BossStateMachine.idle:
                 BossIdleState();

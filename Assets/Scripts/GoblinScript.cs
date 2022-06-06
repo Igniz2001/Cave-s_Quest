@@ -38,18 +38,18 @@ public class GoblinScript : MonoBehaviour
     {
         if (Knight == null) return; // si el jugador no existe, entonces que omita cualquiera de las acciones aqui mostradas
 
-        switch (state)
+        switch (state) //aqui se inicia la maquina de estados y se definen cada uno de los estados que van a tomar partido en el codigo
         {
-            case StateMachine.idle:
+            case StateMachine.idle: //este es el estado del enemigo cuando no haga nada
                 IdleState();
                 break;
-            case StateMachine.follow:
+            case StateMachine.follow: //este es el estado del enemigo cuando persiga el heroe
                 FollowState();
                 break;
-            case StateMachine.attack:
+            case StateMachine.attack: //este es el estado del enemigo cuando ataque al heroe
                 AttackState();
                 break;
-            case StateMachine.death:
+            case StateMachine.death: //este es el estado del enemigo cuando muere
                 DeathState();
                 break;
             default:
@@ -58,7 +58,7 @@ public class GoblinScript : MonoBehaviour
         
     }
 
-    public void Look()
+    public void Look() //este es un metodo para que el enemigo detecte al jugador
     {
 
         Vector3 direction = Knight.transform.position - transform.position;// con esto el enemigo siempre mira al jugador
@@ -79,7 +79,7 @@ public class GoblinScript : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void IdleState() // este es el estado que adopta el enemigo cuando no hay nada a su alrededor y espera al jugador
+    public void IdleState() 
     {
         float distance = Mathf.Abs(Knight.transform.position.x - transform.position.x);
         if (distance < followDistance)
@@ -88,7 +88,7 @@ public class GoblinScript : MonoBehaviour
         }
     }
 
-    public void FollowState() //este estado se adopta cuando el enemigo persigue al jugador
+    public void FollowState()
     {
         Look();
         EdgeLook();
@@ -127,7 +127,7 @@ public class GoblinScript : MonoBehaviour
 
     }
 
-    public void StateChange(StateMachine e) //esto cambia los estados del enemigo 
+    public void StateChange(StateMachine e) //esto cambia los estados del enemigo a lo largo del juego 
     {
         if (state == StateMachine.follow)
         {
@@ -150,7 +150,7 @@ public class GoblinScript : MonoBehaviour
         }
     }
 
-    private void DeathSound()
+    private void DeathSound() // esto solo reproduce un sonido de muerte cuando muere el enemigo
     {
         reproductor.PlayOneShot(death);
     }
@@ -158,12 +158,12 @@ public class GoblinScript : MonoBehaviour
     {   // Aqui muestra como el enemigo toma daño de parte del jugador en caso de ser golpeado
         Life -= damage;
         Animator.SetTrigger("attacked");
-        if (Life <= 0)
+        if (Life <= 0) //si la vida llega a 0...
         {
-            HitDamage = 0.0f;
-            Speed = 0.0f;
-            Animator.SetTrigger("dying");
-            Invoke(nameof(DeathSound), soundEnter);
+            HitDamage = 0.0f; //dejará de hacer daño al heroe
+            Speed = 0.0f; //no se moverá
+            Animator.SetTrigger("dying"); //se animará la muerte
+            Invoke(nameof(DeathSound), soundEnter); // se llama con retardo el sonido y la muerte para que coincidan a la vez
             Invoke(nameof(Death), deathEnter);
             
         }
@@ -185,14 +185,14 @@ public class GoblinScript : MonoBehaviour
     }
 
     private void OnDrawGizmos()
-    {   //Esto es para el enemy attack controller, la bolita verde que contiene el daño que el enemigo hará
+    {   //Esto es para el enemy attack controller, la esfera verde que hará daño a todo lo que se encuentre dentro
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(AttackController.position, HitRatio);
         Gizmos.DrawWireSphere(transform.position + new Vector3(transform.localScale.x * borderDistance, 0, 0), borderRadio);
     }
 }
 
-public enum StateMachine{ //esta es la maquina de estados
+public enum StateMachine{ //esta es la maquina de estados, donde se ordenan cada uno de los comportamientos del enemigo
     idle = 0,
     follow = 1,
     attack = 2,

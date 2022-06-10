@@ -8,7 +8,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject pauseMenu;
     public bool pause = false;
 
-
+    //este script cumple con la historia de usuario 9
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) //cuando el jugador presione ESC se desplegará el meenu de pausa

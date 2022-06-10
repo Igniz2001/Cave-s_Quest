@@ -19,7 +19,7 @@ public class KnightMovement : MonoBehaviour
     public float Life;
     [SerializeField] AudioClip potionSound;
     [SerializeField] AudioClip rubySound;
-    [SerializeField] Slider LifeSlider;
+    [SerializeField] Slider LifeSlider; //esta variable cumple con la historia de usuario 4
     //-----------------------------------------------------------------------------------------------
     [SerializeField] AudioClip swordSwing;
     [SerializeField] private Transform AttackController;
@@ -142,7 +142,7 @@ public class KnightMovement : MonoBehaviour
         SceneManager.LoadScene("PrincipalMenu");
     }
     public void TakeDamage(float damage) //esto recibe el daño que le hacen al jugador
-    {
+    {//este método cumple con la historia de usuario 5
         if (damage <= 0.0f)
         {
             return;
@@ -220,7 +220,7 @@ public class KnightMovement : MonoBehaviour
     }
 
     private void Hit() // cuando identifique un enemigo con la etiqueta enemy, mandará una referencia al script del enemigo para causarle daño
-    {
+    {//este método cumple con la historia de usuario 3
 
         Collider2D[] objects = Physics2D.OverlapCircleAll(AttackController.position, HitRatio);
 

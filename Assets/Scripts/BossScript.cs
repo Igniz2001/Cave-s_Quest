@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class BossScript : MonoBehaviour
 {
+    //este script cumple con la historia de usuario 12
     AudioSource reproductor;
     public AudioClip death;
     public BossStateMachine bossState;
@@ -32,7 +33,7 @@ public class BossScript : MonoBehaviour
 
 
     private void Start()
-    {   // Aqui se llama el animador para que las animaciones funcionen cuando se les llame en los metodos
+    {   // Aqui se inicializan todos los componentes externos al script, sea animador, reproductor o slider
         Animator = GetComponent<Animator>();
         reproductor = GetComponent<AudioSource>();
         LifeSlider.maxValue = Life;
@@ -41,9 +42,9 @@ public class BossScript : MonoBehaviour
 
     private void Update()
     {
-        if (Knight == null) return; // si el jugador no existe, entonces que omita cualquiera de las acciones aqui mostradas
+        if (Knight == null) return; // si el jugador ya no existe, entonces que omita cualquiera de las acciones mostradas en este Update
 
-        switch (bossState) //aqui se definen los estados del Boss, que son exactamente igual a los de los enemigos, solo que aqui se renombran ya que las maquinas de estados deben tener nombres propios
+        switch (bossState) //aqui se definen los estados del Boss, que son exactamente iguales a los de los enemigos comúnes, solo que aqui se renombran ya que las maquinas de estados deben tener nombres diferentes para no generar errores
         {
             case BossStateMachine.idle:
                 BossIdleState();
@@ -66,13 +67,13 @@ public class BossScript : MonoBehaviour
     public void Look()
     {
 
-        Vector3 direction = Knight.transform.position - transform.position;// con esto el enemigo siempre mira al jugador
+        Vector3 direction = Knight.transform.position - transform.position;// con esto el enemigo siempre mira al jugador no importa a que distancia esté del enemigo
         if (direction.x >= 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-        else transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f); // con la linea 26 y 27 rota al enemigo dependiendo de donde este el jugador
+        else transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f); // con la linea 26 y 27 rota al enemigo dependiendo de donde esté el jugador
 
     }
 
-    public void BossAttack() // despliega la animación, llama el metodo que causa el daño al jugador y le da un tiempo de enfriamiento
+    public void BossAttack() // despliega la animación, llama el método que causa el daño al jugador y le da un tiempo de enfriamiento para el próximo ataque
     {
         Animator.SetTrigger("enemyAttack");
         BossHit();
@@ -80,7 +81,7 @@ public class BossScript : MonoBehaviour
     }
 
     private void Death()
-    {   // Aqui se detona la muerte del enemigo
+    {   // Aqui se detona la muerte del boss, se borra la pared que hay al final del nivel y se elimina su barra de vida 
         Destroy(Wall);
         Destroy(LifeBar);
         Destroy(gameObject);
@@ -89,7 +90,7 @@ public class BossScript : MonoBehaviour
     public void BossIdleState() // este es el estado que adopta el enemigo cuando no hay nada a su alrededor y espera al jugador
     {
         float distance = Mathf.Abs(Knight.transform.position.x - transform.position.x);
-        if (distance < followDistance)
+        if (distance < followDistance) 
         {
             StateChange(BossStateMachine.follow);
         }
@@ -98,7 +99,7 @@ public class BossScript : MonoBehaviour
     public void BossFollowState() //este estado se adopta cuando el enemigo persigue al jugador
     {
         Look();
-        EdgeLook();
+        EdgeLook(); 
         if (!isInBorder)
         {
             transform.Translate(Speed * Time.deltaTime * transform.localScale.x, 0, 0);

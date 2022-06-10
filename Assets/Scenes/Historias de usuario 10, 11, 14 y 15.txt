@@ -1,0 +1,3 @@
+Level2 y Level3 cumplen con las historias de usuario 10 y 11 respectivamente.
+LevelPass, LevelPass2 y LevelPass3 cumplen con las historia de usuario 14. 
+y también LevelPass3 cumple con la historia de usuario 15. 

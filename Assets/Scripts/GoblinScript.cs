@@ -5,6 +5,7 @@ using UnityEngine;
 public class GoblinScript : MonoBehaviour
 {
     // en este script se maneja todo el comportamiento del enemigo del juego
+    //este script cumple con las historias de usuario 7, 8 y 13
     AudioSource reproductor;
     public AudioClip death;
     public StateMachine state;

@@ -43,6 +43,10 @@ public class ScoreController : MonoBehaviour
         }
     }
 
+    public void ResetPoints()
+    {
+        totalScore = 0;
+    }
     public void IncreasePoints(float amount)
     {
         totalScore += amount;

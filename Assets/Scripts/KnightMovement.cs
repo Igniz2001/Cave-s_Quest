@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class KnightMovement : MonoBehaviour
 {
-    //en este script se hace referencia al personaje del jugador, todo lo relacionado
-    // al jugador menos su ataque
+
     AudioSource reproductor;
     public float Speed;
+    public string Nivel;
     public float JumpForce;
     private Rigidbody2D Rigidbody2D;
     private float Horizontal;
@@ -19,7 +19,7 @@ public class KnightMovement : MonoBehaviour
     public float Life;
     [SerializeField] AudioClip potionSound;
     [SerializeField] AudioClip rubySound;
-    [SerializeField] Slider LifeSlider; //esta variable cumple con la historia de usuario 4
+    [SerializeField] Slider LifeSlider; 
     //-----------------------------------------------------------------------------------------------
     [SerializeField] AudioClip swordSwing;
     [SerializeField] private Transform AttackController;
@@ -139,7 +139,8 @@ public class KnightMovement : MonoBehaviour
     {
         Destroy(gameObject);
         print("Has perdido bro");
-        SceneManager.LoadScene("PrincipalMenu");
+        ScoreController.instance.ResetPoints();
+        SceneManager.LoadScene(Nivel);
     }
     public void TakeDamage(float damage) //esto recibe el daño que le hacen al jugador
     {//este método cumple con la historia de usuario 5

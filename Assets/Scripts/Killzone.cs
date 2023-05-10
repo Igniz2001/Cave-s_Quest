@@ -5,17 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Killzone : MonoBehaviour
 {
-
+    public string Nivel;
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //En este metodo cuando el jugador o un enemigo caigan al abismo, 
-        // en el caso del jugador se cargará el menu principal y destruirá el objeto de jugador
-        //en el caso de que sea un enemigo, solo se destruira el objeto de enemigo
+       
         if(other.gameObject.tag == "Hero")
         {
             Destroy(other.gameObject);
-            SceneManager.LoadScene("PrincipalMenu");
+            ScoreController.instance.ResetPoints();
+            SceneManager.LoadScene(Nivel);
         }
         else if (other.gameObject.tag == "Enemy")
         {

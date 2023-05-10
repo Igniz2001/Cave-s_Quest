@@ -1423,7 +1423,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f8d0ce0f5144c34c86fb1e912562489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseButton: {fileID: 306337284}
   pauseMenu: {fileID: 755020522}
   pause: 0
 --- !u!114 &91819798
@@ -5117,7 +5116,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.4764151, g: 0.97216564, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.24705882}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.3529412}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.5019608}
@@ -5165,14 +5164,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6839622, g: 1, b: 0.95115846, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d74955271b629ac4f90c37c20501fae9, type: 3}
+  m_Sprite: {fileID: -5113469029405553909, guid: b244ee18c04dd1f449a704dfd6aeded5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5419,10 +5418,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 65
+  Nivel: 
   JumpForce: 185
   Life: 1000
-  potionSound: {fileID: 8300000, guid: ad5808c2bcca3f64ebc6294f86a6b4e1, type: 3}
-  rubySound: {fileID: 8300000, guid: b06f3512f9be0a342ae881f5322cf1d5, type: 3}
+  potionSound: {fileID: 8300000, guid: b06f3512f9be0a342ae881f5322cf1d5, type: 3}
+  rubySound: {fileID: 8300000, guid: ad5808c2bcca3f64ebc6294f86a6b4e1, type: 3}
   LifeSlider: {fileID: 376177551}
   swordSwing: {fileID: 8300000, guid: 9abe4135870910a4db2f4ba1f2453ff4, type: 3}
   AttackController: {fileID: 569086864}
@@ -40599,6 +40599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81667c3dbff67144882451acf3dfe32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Nivel: Level2
 --- !u!61 &2077306706
 BoxCollider2D:
   m_ObjectHideFlags: 0

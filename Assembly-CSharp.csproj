@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\BossScript.cs" />
     <Compile Include="Assets\Scripts\Trigger.cs" />
     <Compile Include="Assets\Scripts\KnightMovement.cs" />
+    <Compile Include="Assets\Scripts\ProfileMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -11,6 +11,7 @@ public class ScoreController : MonoBehaviour
     public Text Score;
     public static ScoreController instance;
     [SerializeField] public float totalScore;
+    [SerializeField] public float userHighScore;
     private void Awake()
     {
         if (ScoreController.instance == null)
@@ -40,6 +41,13 @@ public class ScoreController : MonoBehaviour
         if (scene.buildIndex == 0)
         {
             totalScore = 0;
+        }
+        if (scene.buildIndex == 4)
+        {
+            if (totalScore > userHighScore | totalScore == 0)
+            {
+                userHighScore = totalScore;
+            }
         }
     }
 

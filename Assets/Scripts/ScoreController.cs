@@ -14,6 +14,7 @@ public class ScoreController : MonoBehaviour
     public static ScoreController instance;
     public bool allLevelsCleared = false;
     [SerializeField] public float totalScore;
+    [SerializeField] public float userHighScore;
     private void Awake()
     {
         if (ScoreController.instance == null)
@@ -52,6 +53,13 @@ public class ScoreController : MonoBehaviour
         {
             print("Has ganado el nivel");
             SubmitScore();
+        }
+        if (scene.buildIndex == 4)
+        {
+            if (totalScore > userHighScore | totalScore == 0)
+            {
+                userHighScore = totalScore;
+            }
         }
     }
 

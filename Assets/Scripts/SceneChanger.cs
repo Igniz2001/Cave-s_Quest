@@ -9,10 +9,20 @@ public class SceneChanger : MonoBehaviour
     public string scene;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Hero")
+        Scene escene = SceneManager.GetActiveScene();
+
+        if (escene.buildIndex == 4 && other.gameObject.tag == "Hero" )
+        {
+            print("Has ganado el nivel");
+            ScoreController.instance.AllLevelsCleared();
+            SceneManager.LoadScene(scene);
+        }
+
+        else if (other.gameObject.tag == "Hero")
         {
             print("Has ganado el nivel");
             SceneManager.LoadScene(scene);
         }
+        
     }
 }

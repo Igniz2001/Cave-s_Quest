@@ -5,10 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class ProfileMenu : MonoBehaviour
 {
-    public void NewProfile() 
-    {
-        Debug.Log("Se crea un nuevo perfil");
-    }
 
     public void AcessMenu()
     {

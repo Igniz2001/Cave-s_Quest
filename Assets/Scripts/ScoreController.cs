@@ -9,12 +9,13 @@ public class ScoreController : MonoBehaviour
     
     public GameObject Canvas;
     public GameObject Leader;
+    public GameObject playerManager;
     public LeaderBoard leaderboard;
     public Text Score;
     public static ScoreController instance;
     public bool allLevelsCleared = false;
-    [SerializeField] public float totalScore;
-    [SerializeField] public float userHighScore;
+    public bool hasRun = false;
+    [SerializeField] public int totalScore;
     private void Awake()
     {
         if (ScoreController.instance == null)
@@ -27,7 +28,7 @@ public class ScoreController : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
             DontDestroyOnLoad(this.Canvas);
             DontDestroyOnLoad(this.Leader);
-
+            DontDestroyOnLoad(this.playerManager);
             
         }
         else
@@ -35,8 +36,10 @@ public class ScoreController : MonoBehaviour
             Destroy(gameObject);
             Destroy(this.Canvas);
             Destroy(this.Leader);
+            Destroy(this.playerManager);
         }
 
+        
     }
 
 
@@ -46,20 +49,15 @@ public class ScoreController : MonoBehaviour
         Score.text = "Score: " + totalScore;
         if (scene.buildIndex == 0 && allLevelsCleared == true)
         {
+            hasRun = false;
             totalScore = 0;
             allLevelsCleared = false;
         }
-        else if (scene.buildIndex == 1 && allLevelsCleared == true)
+        else if (scene.buildIndex == 1 && allLevelsCleared == true && hasRun == false)
         {
-            print("Has ganado el nivel");
+            hasRun = true;
+            print("Me estoy ejecutando");
             SubmitScore();
-        }
-        if (scene.buildIndex == 4)
-        {
-            if (totalScore > userHighScore | totalScore == 0)
-            {
-                userHighScore = totalScore;
-            }
         }
     }
 
@@ -67,7 +65,7 @@ public class ScoreController : MonoBehaviour
     {
         totalScore = 0;
     }
-    public void IncreasePoints(float amount)
+    public void IncreasePoints(int amount)
     {
         totalScore += amount;
     }
@@ -77,10 +75,10 @@ public class ScoreController : MonoBehaviour
         allLevelsCleared = true;
     }
 
-    public void SubmitScore()
+    public  void SubmitScore()
     {
-        int integerScore = (int)totalScore;
-        leaderboard.SubmitScoreRoutine(integerScore);
+        print("subiendo puntaje");
+        leaderboard.SubmitScoreToTable(totalScore);
 
     }
 }

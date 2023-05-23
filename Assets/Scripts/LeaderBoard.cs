@@ -6,15 +6,20 @@ using LootLocker.Requests;
 public class LeaderBoard : MonoBehaviour
 {
     int leaderboardID = 14305;
-    public static LeaderBoard instance;
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
+    public void SubmitScoreToTable(int score)
+    {
+        StartCoroutine(SubmitScoreRoutine(score));
+    }
+
     public IEnumerator SubmitScoreRoutine(int scoreToUpload)
     {
+        print("Checking...");
         bool done = false;
         string playerID = PlayerPrefs.GetString("PlayerID");
         LootLockerSDKManager.SubmitScore(playerID, scoreToUpload, leaderboardID, (response) =>

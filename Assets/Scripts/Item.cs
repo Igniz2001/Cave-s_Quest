@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    [SerializeField] private float amount;
+    [SerializeField] private int amount;
     private void OnTriggerEnter2D(Collider2D other)
     {   
         if (other.CompareTag("Hero"))

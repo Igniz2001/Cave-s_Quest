@@ -10,7 +10,7 @@ public class InitialMenu : MonoBehaviour
 
     public void PlayGame() //este método cumple con la historia de usuario 1
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("PlayerName");
     }
 
     public void ExitGame() //este método cumple con la historia de usuario 2

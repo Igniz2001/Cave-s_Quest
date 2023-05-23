@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/PlayerName.unity
+- path: Assets/Scenes/ProfileMenu.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

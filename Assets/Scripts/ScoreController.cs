@@ -8,13 +8,8 @@ public class ScoreController : MonoBehaviour
 {
     
     public GameObject Canvas;
-    public GameObject Leader;
-    public GameObject playerManager;
-    public LeaderBoard leaderboard;
     public Text Score;
     public static ScoreController instance;
-    public bool allLevelsCleared = false;
-    public bool hasRun = false;
     [SerializeField] public int totalScore;
     private void Awake()
     {
@@ -27,16 +22,12 @@ public class ScoreController : MonoBehaviour
             ScoreController.instance = this;
             DontDestroyOnLoad(this.gameObject);
             DontDestroyOnLoad(this.Canvas);
-            DontDestroyOnLoad(this.Leader);
-            DontDestroyOnLoad(this.playerManager);
             
         }
         else
         {
             Destroy(gameObject);
             Destroy(this.Canvas);
-            Destroy(this.Leader);
-            Destroy(this.playerManager);
         }
 
         
@@ -47,17 +38,9 @@ public class ScoreController : MonoBehaviour
     {
         Scene scene = SceneManager.GetActiveScene();
         Score.text = "Score: " + totalScore;
-        if (scene.buildIndex == 0 && allLevelsCleared == true)
+        if (scene.buildIndex == 0)
         {
-            hasRun = false;
             totalScore = 0;
-            allLevelsCleared = false;
-        }
-        else if (scene.buildIndex == 1 && allLevelsCleared == true && hasRun == false)
-        {
-            hasRun = true;
-            print("Me estoy ejecutando");
-            SubmitScore();
         }
     }
 
@@ -70,15 +53,4 @@ public class ScoreController : MonoBehaviour
         totalScore += amount;
     }
 
-    public void AllLevelsCleared()
-    {
-        allLevelsCleared = true;
-    }
-
-    public  void SubmitScore()
-    {
-        print("subiendo puntaje");
-        leaderboard.SubmitScoreToTable(totalScore);
-
-    }
 }

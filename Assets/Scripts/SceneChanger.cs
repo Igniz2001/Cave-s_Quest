@@ -14,7 +14,6 @@ public class SceneChanger : MonoBehaviour
         if (escene.buildIndex == 4 && other.gameObject.tag == "Hero" )
         {
             print("Has ganado el nivel");
-            ScoreController.instance.AllLevelsCleared();
             SceneManager.LoadScene(scene);
         }
 

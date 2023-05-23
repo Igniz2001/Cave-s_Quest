@@ -5,14 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class ProfileMenu : MonoBehaviour
 {
-
-    public void AcessMenu()
-    {
-        SceneManager.LoadScene("ProfileMenu");
-    }
-
-    public void Back() 
+    public void Next() 
     {
         SceneManager.LoadScene("PrincipalMenu");
+    }
+
+    public void AccessLeaderboard()
+    {
+        SceneManager.LoadScene("ProfileMenu");
     }
 }

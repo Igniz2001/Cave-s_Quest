@@ -18,7 +18,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -1086,4 +1085,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level1.unity
   - Assets/Scenes/Level2.unity
   - Assets/Scenes/Level3.unity
-  playerPath: "C:/Users/Silent Hill/Downloads/build final caves/Cave\xB4s Quest.exe"
+  playerPath: "C:/Users/Silent Hill/Downloads/cave final/Cave\xB4s Quest.exe"

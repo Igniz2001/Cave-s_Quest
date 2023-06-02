@@ -5418,7 +5418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 65
-  Nivel: 
+  Nivel: Level2
   JumpForce: 185
   Life: 1000
   potionSound: {fileID: 8300000, guid: b06f3512f9be0a342ae881f5322cf1d5, type: 3}

@@ -17,18 +17,18 @@ public class CameraMovement : MonoBehaviour
 
     void Follow()
     {
-        if (target != null)
+        if (target != null)//o(1)
         {
-            Vector3 targetPosition = target.position + offset;
+            Vector3 targetPosition = target.position + offset;//o(n)
             //Verifica si el targetPosition esta fuera de limite o no
             //Está limitado a los valores max y min observados en el componente del script
 
-            Vector3 boundPosition = new Vector3(Mathf.Clamp(targetPosition.x, minValues.x, maxValue.x),
-                Mathf.Clamp(targetPosition.y, minValues.y, maxValue.y),
-                Mathf.Clamp(targetPosition.z, minValues.z, maxValue.z));
+            Vector3 boundPosition = new Vector3(Mathf.Clamp(targetPosition.x, minValues.x, maxValue.x),//o(n)
+                Mathf.Clamp(targetPosition.y, minValues.y, maxValue.y),//o(n)
+                Mathf.Clamp(targetPosition.z, minValues.z, maxValue.z));//o(n)
 
-            Vector3 smoothPosition = Vector3.Lerp(transform.position, boundPosition, smoothFactor * Time.fixedDeltaTime);
-            transform.position = smoothPosition;
+            Vector3 smoothPosition = Vector3.Lerp(transform.position, boundPosition, smoothFactor * Time.fixedDeltaTime);//o(n)
+            transform.position = smoothPosition;//o(n)
         }
     }
 }

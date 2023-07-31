@@ -20,7 +20,9 @@ public class GoblinScript : MonoBehaviour
     [SerializeField] private float HitDamage;
     public float soundEnter;
     public float deathEnter;
-    
+    private bool jumpingBackwards = false;
+    public float JumpForce = 1.5f;
+
     [Header("Variables Bonitas")]
     public float attackRange = 1;
     public float followDistance = 4;
@@ -38,6 +40,15 @@ public class GoblinScript : MonoBehaviour
     private void Update()
     {
         if (Knight == null) return; // si el jugador no existe, entonces que omita cualquiera de las acciones aqui mostradas
+
+        if (jumpingBackwards)
+        {
+            // Aplicar salto hacia atrás
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
+            Vector2 movement = new Vector2(-1 * transform.localScale.x, 1); // Salto en dirección opuesta al enemigo
+            rb.AddForce(movement * JumpForce, ForceMode2D.Impulse);
+            jumpingBackwards = false;
+        }
 
         switch (state) //aqui se inicia la maquina de estados y se definen cada uno de los estados que van a tomar partido en el codigo
         {
@@ -167,6 +178,10 @@ public class GoblinScript : MonoBehaviour
             Invoke(nameof(DeathSound), soundEnter); // se llama con retardo el sonido y la muerte para que coincidan a la vez
             Invoke(nameof(Death), deathEnter);
             
+        }
+        else
+        {
+            jumpingBackwards = true;
         }
     }
     private void EnemyHit()

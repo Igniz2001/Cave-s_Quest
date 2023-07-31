@@ -11,6 +11,8 @@ public class KnightMovement : MonoBehaviour
     public float Speed;
     public string Nivel;
     public float JumpForce;
+    private bool jumpingBackwards = false;
+    public float JumpAttackedForce = 1.5f;
     private Rigidbody2D Rigidbody2D;
     private float Horizontal;
     private float Vertical;
@@ -74,7 +76,14 @@ public class KnightMovement : MonoBehaviour
         }
 
 
-
+        if (jumpingBackwards)
+        {
+            // Aplicar salto hacia atrás
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
+            Vector2 movement = new Vector2(-1 * transform.localScale.x, 1); // Salto en dirección opuesta al enemigo
+            rb.AddForce(movement * JumpAttackedForce, ForceMode2D.Impulse);
+            jumpingBackwards = false;
+        }
 
 
         Debug.DrawRay(transform.position, Vector3.down * 0.3f, Color.red);//esto detecta si hay suelo para generar un enfriamiento para el salto del personaje para que no sea infinito
@@ -152,6 +161,7 @@ public class KnightMovement : MonoBehaviour
         {
             Life -= damage;
             LifeSlider.value = Life;
+            jumpingBackwards = true;
             if (agachar)
             {
                 StartCoroutine(AttackStop());
